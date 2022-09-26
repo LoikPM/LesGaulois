@@ -33,8 +33,10 @@ public class Romain {
 	public static void main(String[] args) {
 		Romain minus;
 		minus = new Romain ("Minus", 4);
+		
 		System.out.println(minus.getNom());
 			
+		minus.parler("Bonjour");
 	}
 	
 }
