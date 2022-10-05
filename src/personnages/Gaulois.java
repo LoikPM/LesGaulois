@@ -1,5 +1,7 @@
 package personnages;
 
+import personnages.Romain;
+
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -15,7 +17,7 @@ public class Gaulois {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + "<< " + texte + " >>");
 	}
 	
 	private String prendreParole() {
@@ -23,9 +25,15 @@ public class Gaulois {
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de "
+		System.out.println(nom + " envoie un grand coup dans la machoire de "
 				+ romain.getNom());
 		romain.recevoirCoup(force / 3);
+	}
+	
+	
+	public void boirePotion(int forcePotion) {
+		this.parler("Merci Druide, je sens que ma force est " + forcePotion + " dÃ©cuplÃ©e !");
+		force = force * forcePotion;
 	}
 	
 	@Override
@@ -35,12 +43,22 @@ public class Gaulois {
 	}
 	
 	public static void main(String[] args) {
-		Gaulois obelix;
-		obelix = new Gaulois ("Obélix", 6);
 		
-		System.out.println(obelix.getNom());
+		Gaulois asterix;
+		asterix = new Gaulois ("Asterix", 8);
+		Romain minus;
+		minus = new Romain ("Minus", 4);
 		
-		obelix.parler("Bonjour");		
+		System.out.println(asterix);
+		
+		asterix.parler("Bonjour, je suis Asterix, et je vais frapper Minus");
+		
+		asterix.frapper(minus);
+		
+		asterix.boirePotion(3);
+		
+		System.out.println(asterix);
+
+
 	}
-	
 }
