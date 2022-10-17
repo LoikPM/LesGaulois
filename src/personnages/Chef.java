@@ -26,15 +26,5 @@ public class Chef {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " +
 				romain.getNom());
 		romain.recevoirCoup(force / 3);
-	}
-
-public static void main(String[] args) {
-	Chef philippe;
-	Village village;
-	village = new Village();
-	philippe = new Chef("Philippe", 10, 6, village);
-	
-	System.out.println(philippe.getNom());
-	
-	philippe.parler("Bonjour, je suis Philippe");	
-}}
+	}	
+}

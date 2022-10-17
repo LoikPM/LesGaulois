@@ -49,6 +49,7 @@ public class Gaulois {
 		Romain minus;
 		minus = new Romain ("Minus", 4);
 		
+		asterix.toString();
 		System.out.println(asterix);
 		
 		asterix.parler("Bonjour, je suis Asterix, et je vais frapper Minus");
